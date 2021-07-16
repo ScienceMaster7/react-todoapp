@@ -56,9 +56,7 @@ function App() {
           <button className="addTodoButton">Add</button>
         </form>
       </header>
-      <main>
-        <ul>{todoList}</ul>
-      </main>
+      <main className="content">{todoList}</main>
     </div>
   );
 }

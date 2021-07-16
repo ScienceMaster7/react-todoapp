@@ -1,14 +1,16 @@
+import "./CreateTodos.css";
+
 export default function CreateTodos({ todo, deletetask }) {
   function Delete() {
     deletetask(todo.task);
   }
   return (
-    <div className="todoContainer">
-      <button onClick={Delete} className="todoDeleteButton">
+    <section className="todoContainer">
+      <button onClick={Delete} className="todo__DeleteButton">
         X
       </button>
-      <li>{todo.task}</li>
-      <p>status</p>
-    </div>
+      <li className="todo__listitem">{todo.task}</li>
+      <p className="todo__text">status</p>
+    </section>
   );
 }
