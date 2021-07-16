@@ -9,3 +9,24 @@
 .App {
   text-align: center;
 }
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: 70px;
+  width: 70px;
+  margin-right: 20px;
+}
+
+.addTodoInput {
+  margin-right: 20px;
+  padding: 10px;
+}
+
+.addTodoButton {
+  padding: 10px;
+}
