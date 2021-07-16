@@ -17,7 +17,25 @@
 }
 
 .todo__DeleteButton {
-  padding: 5px 10px;
+  border: none;
+  padding: 5px 12px;
   background-color: red;
-  border-radius: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.todo__DoneButton {
+  border: none;
+  margin-left: 20px;
+  padding: 5px 10px;
+  background-color: green;
+  border-radius: 5px;
+}
+
+.todo__text {
+  color: orangered;
+}
+
+.todo__text--toggled {
+  color: green;
 }
