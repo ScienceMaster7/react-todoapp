@@ -24,11 +24,29 @@
   font-weight: bold;
 }
 
+.todo__DeleteButton:hover {
+  cursor: pointer;
+  transform: scale(1.2, 1.2);
+}
+
 .todo__DoneButton {
   border: none;
   margin-left: 20px;
   padding: 5px 10px;
   background-color: green;
+  border-radius: 5px;
+}
+
+.todo__DoneButton:hover {
+  cursor: pointer;
+  transform: scale(1.2, 1.2);
+}
+
+.todo__EditButton {
+  border: none;
+  margin-left: 20px;
+  padding: 5px 10px;
+  background-color: rebeccapurple;
   border-radius: 5px;
 }
 

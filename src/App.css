@@ -11,6 +11,9 @@
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,17 +26,37 @@
   margin-right: 20px;
 }
 
-.addTodoInput {
-  margin-right: 20px;
+.form {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.addTodo__Input {
+  margin: 20px;
   padding: 10px;
 }
 
-.addTodoButton {
+.addTodo__Button {
   padding: 10px;
+  margin: 20px 0;
 }
-
+.addTodo__Select {
+  margin: 20px 0;
+}
 .content {
   display: flex;
   flex-wrap: wrap;
   background-color: beige;
+  overflow-y: scroll;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1em;
+  background-color: greenyellow;
 }

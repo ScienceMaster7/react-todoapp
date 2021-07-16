@@ -44,19 +44,27 @@ function App() {
     <div className="App">
       <header className="header">
         <img className="logo" src="./logo192.png" alt="react logo" />
-        <form onSubmit={handleSubmit}>
+        <form className="form" onSubmit={handleSubmit}>
+          <select className="addTodo__Select" name="selectTodo" id="selectTodo">
+            <option value="All">All</option>
+            <option value="Done">Done</option>
+          </select>
+
           <input
-            className="addTodoInput"
+            className="addTodo__Input"
             type="text"
             name="todoInput"
             id="todoInput"
             placeholder="What needs to be done ?"
             autoComplete="off"
           />
-          <button className="addTodoButton">Add</button>
+          <button className="addTodo__Button">Add</button>
         </form>
       </header>
       <main className="content">{todoList}</main>
+      <footer>
+        <p className="footer">Made with ❤️ by ScienceMaster7 </p>
+      </footer>
     </div>
   );
 }
