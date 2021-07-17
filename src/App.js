@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import CreateTodos from "./components/CreateTodos";
+import { v4 as uuidv4 } from "uuid";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -13,7 +14,9 @@ function App() {
     const addTodos = [
       ...todos,
       {
+        id: uuidv4(),
         task: newTodo,
+        editing: false,
         completed: false,
       },
     ];
@@ -30,12 +33,20 @@ function App() {
     setTodos(updatedTodos);
   }
 
+  function handleEditButtonClick(id) {
+    const editedTodos = todos.filter((todo) => {
+      return todo.id === id ? (todo.editing = true) : todo.task;
+    });
+    setTodos(editedTodos);
+  }
+
   const todoList = todos.map((todo, index) => {
     return (
       <CreateTodos
         key={index}
         todo={todo}
         deletetask={handleDeleteButtonClick}
+        edittask={handleEditButtonClick}
       />
     );
   });

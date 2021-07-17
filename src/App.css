@@ -45,6 +45,7 @@
   margin: 20px 0;
 }
 .content {
+  height: 84vh;
   display: flex;
   flex-wrap: wrap;
   background-color: beige;

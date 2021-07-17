@@ -50,6 +50,29 @@
   border-radius: 5px;
 }
 
+.todo__EditButton:hover {
+  cursor: pointer;
+  transform: scale(1.2, 1.2);
+}
+
+.todo__edit--form {
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+}
+
+.todo__edit--input {
+  margin-left: 20px;
+  padding: 10px;
+}
+
+.todo__edit__form--toggled {
+  visibility: visible;
+  height: initial;
+  width: initial;
+  margin-left: 20px;
+  padding: 10px;
+}
 .todo__text {
   color: orangered;
 }
