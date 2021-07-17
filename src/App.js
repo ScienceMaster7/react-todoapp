@@ -34,10 +34,17 @@ function App() {
   }
 
   function handleEditButtonClick(id) {
-    const editedTodos = todos.filter((todo) => {
+    const showeditor = todos.filter((todo) => {
       return todo.id === id ? (todo.editing = true) : todo.task;
     });
-    setTodos(editedTodos);
+    setTodos(showeditor);
+  }
+
+  function handleEditSubmit(editedTask, id) {
+    const addedit = todos.filter((todo) => {
+      return todo.id === id ? (todo.task = editedTask) : todo.task;
+    });
+    setTodos(addedit);
   }
 
   const todoList = todos.map((todo, index) => {
@@ -46,7 +53,8 @@ function App() {
         key={index}
         todo={todo}
         deletetask={handleDeleteButtonClick}
-        edittask={handleEditButtonClick}
+        showeditor={handleEditButtonClick}
+        edittask={handleEditSubmit}
       />
     );
   });

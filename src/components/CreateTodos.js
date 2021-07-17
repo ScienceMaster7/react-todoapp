@@ -3,7 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
 
-export default function CreateTodos({ todo, deletetask, edittask }) {
+export default function CreateTodos({
+  todo,
+  deletetask,
+  showeditor,
+  edittask,
+}) {
   function Delete() {
     deletetask(todo.task);
   }
@@ -13,7 +18,18 @@ export default function CreateTodos({ todo, deletetask, edittask }) {
     editformclassname = "todo__edit__form--toggled";
   }
   function Edit() {
-    edittask(todo.id);
+    showeditor(todo.id);
+  }
+
+  function NewEditedTask(event) {
+    event.preventDefault();
+    const form = event.target;
+    const editedTask = form.editinput.value;
+    if (editedTask !== null && editedTask !== undefined) {
+      edittask(editedTask, todo.id);
+    } else {
+      alert("You need to write a new task");
+    }
   }
 
   return (
@@ -29,12 +45,13 @@ export default function CreateTodos({ todo, deletetask, edittask }) {
       </button>
       <li className="todo__listitem">{todo.task}</li>
       <p className="todo__text">status</p>
-      <form className={`${editformclassname}`}>
+      <form onSubmit={NewEditedTask} className={`${editformclassname}`}>
         <input
           className="todo__edit--input"
           type="text"
           name="editinput"
           id="editinput"
+          autoComplete="off"
         />
         <button className="todo__edit--button">Save</button>
       </form>
