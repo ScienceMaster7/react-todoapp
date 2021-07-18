@@ -25,11 +25,15 @@ export default function CreateTodos({
     event.preventDefault();
     const form = event.target;
     const editedTask = form.editinput.value;
-    if (editedTask !== null && editedTask !== undefined) {
-      edittask(editedTask, todo.id);
+
+    if (editedTask !== null && editedTask !== undefined && editedTask !== "") {
+      edittask((todo.task = editedTask), todo.id);
     } else {
-      alert("You need to write a new task");
+      alert("You can't leave the input field empty");
     }
+
+    form.reset();
+    console.log(editformclassname);
   }
 
   return (

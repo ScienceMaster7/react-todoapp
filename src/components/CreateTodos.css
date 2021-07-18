@@ -68,8 +68,6 @@
 
 .todo__edit__form--toggled {
   visibility: visible;
-  height: initial;
-  width: initial;
   margin-left: 20px;
   padding: 10px;
 }
