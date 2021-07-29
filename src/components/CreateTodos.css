@@ -1,0 +1,80 @@
+.todoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #2193b0, #6dd5ed);
+  padding: 1em;
+  margin: 1em;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 5px;
+}
+
+.todo__listitem {
+  list-style: none;
+  margin: 0 20px;
+}
+
+.todo__DeleteButton {
+  border: none;
+  padding: 5px 12px;
+  background-color: red;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.todo__DeleteButton:hover {
+  cursor: pointer;
+  transform: scale(1.2, 1.2);
+}
+
+.todo__DoneButton {
+  border: none;
+  margin-left: 20px;
+  padding: 5px 10px;
+  background-color: green;
+  border-radius: 5px;
+}
+
+.todo__DoneButton:hover {
+  cursor: pointer;
+  transform: scale(1.2, 1.2);
+}
+
+.todo__EditButton {
+  border: none;
+  margin-left: 20px;
+  padding: 5px 10px;
+  background-color: rebeccapurple;
+  border-radius: 5px;
+}
+
+.todo__EditButton:hover {
+  cursor: pointer;
+  transform: scale(1.2, 1.2);
+}
+
+.todo__edit--form {
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+}
+
+.todo__edit--input {
+  margin-left: 20px;
+  padding: 10px;
+}
+
+.todo__edit__form--toggled {
+  visibility: visible;
+  margin-left: 20px;
+  padding: 10px;
+}
+.todo__text {
+  color: orangered;
+}
+
+.todo__text--toggled {
+  color: green;
+}
